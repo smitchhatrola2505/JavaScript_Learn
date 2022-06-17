@@ -1,0 +1,150 @@
+                             ** JavaScript ** (cashsensetive)
+
+Introduction : 
+    
+
+What is JavaScript?
+    
+    -> JavaScript is an interpreted, client-side, event-based, object-oriented scripting language.
+    -> Invented in 1995 at Netscape Corporation(livescript)
+    -> JavaScript programs are run by an interpreter built into the user's web browser.
+    -> It is a case-sestitive language
+
+What can JavaScript do ?
+
+    -> JavaScript can dynamically modify at html page
+    -> JavaScript can validate user input JavaScript can validate user input
+    -> JavaScript can be used to create cookies
+    -> JavaScript is a full-featured programming language
+
+What makes JavaScript unique ? 
+
+    -> Support by all major browser and enabled by default
+    -> Complex things are done simply
+    -> Full integration with html/css 
+
+JavaScript Frameworks and libraries
+   
+    -> Angular
+    -> React 
+    -> Jquery
+    -> Vue.js
+    -> Ext.js
+    -> Ember.js
+    -> Node.js
+    -> Polymer
+    -> Aurelia
+    -> Backbone.js
+
+Js In Html Page : 
+
+    -> Internal : <script type="text/JavaScript"> //js code goes hear </script>
+
+    -> External :  <script src="index.js"> </script>
+
+Important Function : 
+
+    -> alert()
+    -> confirm()
+    -> console.log()
+    -> document.write()
+    -> prompt()
+
+        alert() : it is used to alert the user that something has happend.
+
+        confirm() : opens up a confirm/cancel dialog and return true/false depending on user's click
+
+        console.log() : Write information to the browser console, good for debuging purpoes
+
+        document.write() : Write directly to the html document
+
+        prompt(msg,default) : Creates an dialog for user input 
+
+Variable : 
+
+    -> Variable are containers which hold reusable data
+
+    -> it is the basic unit of storage in a program
+
+    -> The value store in a Variable can be changed during program execution 
+
+    Ex. var name;
+
+    Scope : 
+
+        -> Variable declared within a Function are local to that Function
+
+        -> Variable declared outside of any Function are global Variable
+
+    Life time : 
+
+        -> Local Variable's life time is within the block of its declaration
+
+        -> Global Variable's life time is throughout the program
+
+Put & Get data from Html : 
+
+    -> document.getElementById() : var x = document.getElementById("main").innerHTML;
+
+    -> document.getElementsByClassName() :  var x = document.getElementsByClassName("main")[0].innerHTML;
+                                            alert(x);
+       innerHTML()
+
+String Concatenation (+) : 
+
+    -> var z = "hello" + "Everyone" ;
+       alert(z);
+
+    -> var a = "hello";
+       var b = "Everyone";
+       var c = a + b ;
+
+Operator & Types Of Operator : 
+
+    -> Arithmetic : +, -, *, /, %(remainder), ++, --
+    
+    -> Logical :  &&, ||
+    
+    -> Ternary : <condition> ? "yes" : "no"
+    
+    -> Assignment : =, +=, -=, *=, /=, %=
+
+    -> Comparison : ==, !=, >, <, >=, <= 
+
+Functions : 
+
+    -> Function are group of code or program which is used more often. 
+
+    -> It leads programming to code reusability and clean code.
+
+    types : 
+
+        (i). Pre defined : alert()... etc...
+        
+        (ii). User defined : 
+        
+            function <functionName>(){
+            
+                //function body 
+            
+            }      
+
+            Arguments : 
+
+            function <functionName>(a,b){
+
+                //function body.
+            
+            }
+    
+    Call UDF On Click Event : 
+
+     <button onclick="name_()">Submit</button>
+
+     function name_(){
+        var x = document.getElementById("name").value;
+        var y = "Hello " + x;
+        alert(y);   
+     }
+
+    
