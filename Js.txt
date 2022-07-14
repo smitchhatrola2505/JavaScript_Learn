@@ -2,7 +2,6 @@
 
 Introduction : 
     
-
 What is JavaScript?
     
     -> JavaScript is an interpreted, client-side, event-based, object-oriented scripting language.
@@ -42,11 +41,31 @@ Js In Html Page :
 
     -> External :  <script src="index.js"> </script>
 
+console : 
+
+    -> Show the JavaScript error.
+
+    -> used for test a code.
+
+    console.log(x);
+    console.table(x);
+    console.error("Something Went Wrong");
+    console.warn("This Is just an warning");
+    console.clear();
+    console.time("To show the run time");
+    console.timeEnd("To show the end of time");
+
+Comments : 
+
+    -> Single Line :  // 
+
+    -> Multiple Line : /* */
+
 Important Function : 
 
     -> alert()
     -> confirm()
-    -> console.log()
+    -> console.log()        
     -> document.write()
     -> prompt()
 
@@ -56,11 +75,13 @@ Important Function :
 
         console.log() : Write information to the browser console, good for debuging purpoes
 
-        document.write() : Write directly to the html document
+        document.write() : Write directly to the html document 
 
         prompt(msg,default) : Creates an dialog for user input 
 
 Variable : 
+
+    -> Variable are a cash sensetive.
 
     -> Variable are containers which hold reusable data
 
@@ -68,7 +89,9 @@ Variable :
 
     -> The value store in a Variable can be changed during program execution 
 
-    Ex. var name;
+    Ex. var name; //can declaration any of time
+        let name; //canot declaration couple of time
+        const name; //can not change the value
 
     Scope : 
 
@@ -81,6 +104,84 @@ Variable :
         -> Local Variable's life time is within the block of its declaration
 
         -> Global Variable's life time is throughout the program
+
+data type : 
+
+    typeof x;
+
+    String :  var x = "Hello world";
+
+    Number :  var x = 25;
+
+    Boolean : var x = true;
+
+    Null : var x = null;
+
+    Undefined : var x; or var x = undefined;
+
+    Array : var x = ["HTML","CSS","JS"];
+
+    Object : var x = {first : "smit",secound : "Patel"}; 
+
+Type Conversion : 
+
+    -> Number();
+    -> parseFloat();
+    -> parseInt();
+    -> isFinite(); // check the number is finit or not, return true or false.
+    -> isInteger(); // check the number is integer or not, return true or false.
+    -> String();
+    -> toExponential();
+    -> toFixed(x); // give the value after point, like: 5.235
+    -> toPrecision(x); // same work as toFixed.
+    -> getDate();
+    -> getMonth();
+
+Operator & Types Of Operator : 
+
+    -> Arithmetic : +, -, *, /, %(remainder), ++, --,**
+    
+    -> Logical :  &&, ||
+    
+    -> Ternary : (condition) ? "yes" : "no"
+    
+    -> Assignment : =, +=, -=, *=, /=, %=
+
+    -> Comparison : ==, !=, >, <, >=, <= 
+
+        -> Strict comparison (e.g., ===)
+        -> Abstract comparison (e.g. ==)
+
+Condition Statement : 
+
+    ->  if(Condition) {
+         
+            //Write Code Here
+        
+        }
+        else if(Condition){
+
+            //Write Code Here
+
+        }
+        else
+        {
+            //Write Code Here
+        }
+    
+    -> switch(expression){
+         
+        case condition 1 : Statement
+        break;
+
+        case condition 2 : Statement
+        break;
+
+        case condition 3 : Statement
+        break;
+        default : Statement 
+        
+        }
 
 Put & Get data from Html : 
 
@@ -98,18 +199,6 @@ String Concatenation (+) :
     -> var a = "hello";
        var b = "Everyone";
        var c = a + b ;
-
-Operator & Types Of Operator : 
-
-    -> Arithmetic : +, -, *, /, %(remainder), ++, --
-    
-    -> Logical :  &&, ||
-    
-    -> Ternary : <condition> ? "yes" : "no"
-    
-    -> Assignment : =, +=, -=, *=, /=, %=
-
-    -> Comparison : ==, !=, >, <, >=, <= 
 
 Functions : 
 
@@ -129,22 +218,337 @@ Functions :
             
             }      
 
-            Arguments : 
+            functionName();
 
-            function <functionName>(a,b){
+            -> parameter & Arguments : 
 
-                //function body.
+                function <functionName>(parameter1="default value",parameter2="default value"){
+
+                    //function body.
             
+                }
+
+                functionName(argument1,argument2);
+
+        (III). Function With return value : 
+
+                function functionName(){
+                    return value;
+                }
+                var res = functionName();
+        
+    Arrow Function : 
+
+    Call Back Function : A callback the function is a function that is passed to another function as an argument and is executed after some operation has been completed. 
+                             Below is an example of a simple callback function that logs to the console after some operations have been completed.
+
+Events : 
+
+    -> Click :
+        -> onclick = "functionName()"
+    
+    -> Double click : 
+        -> ondblclick 
+    
+    -> Right click : 
+        -> oncontextmenu
+
+    -> Mouse Hover : 
+        -> onmouseenter 
+
+    -> Mouse Out : 
+        -> onmouseout
+
+    -> Mouse Down : 
+        -> onmousedown 
+
+    -> Mouse Up : 
+        -> onmouseup
+
+    note : windows event work on body tag
+
+    -> Key Press : work on body tag  
+        -> onkeypress 
+
+    -> Key Up :
+        -> onkeyup
+
+    -> Load :
+        -> onload
+
+    -> Unload :
+        -> onunload
+
+    -> Resize : work on body tag
+        -> onresize
+
+    -> Scroll :         
+        -> onscroll 
+
+Loops : 
+
+    -> while : 
+        -> while(condition){
+             //code
+           }
+
+    -> do/while :
+        -> do{
+             //code 
+            } while(condition)  
+
+    -> for :
+        -> for(condition){
+             //code
             }
+
+    -> for/in : Work in Object 
+    -> forEach : Work in Array
+
+Nestes Loop : 
+
+    -> for(condition){ //represent Row
+        for(condition){ //represent Column
+            //code 
+            }
+        }
+
+Break & Continue : 
+
+    -> Continue : work on Continue the loop. 
+    -> Break : work on break the loop. 
+
+JS Methods : 
+
+    -> .replaceAll(' ','') //Remove The White Space in String.
+    -> .match(/[aeiou]/gi) //match string
+    -> .split("");//split the charecter or .split(" ",3) //split the word or split the array
+    -> .reverse(); //reverse the string or an array.
+    -> .join(); or join(" and ");
+
+Arrays : 
+
+    -> We can store Multiple value in Single Variable.
+
+    Ex. (i) var a = [10,20,30,true,"smit"];
+
+        (ii) var a = new Array(10,"smit",true); or a = new Array(3);
+
+    -> Multidimensional Array : 
+
+    Ex. var a = [["harry",18,"male"],["sunny",19,"male"],["sarah",18,"female"]];
+        document.write(a[0][1]);
+
+    -> delete a[1];
+
+    -> Array Methods : 
+
+        -> sort() : a.sort(); // a to z
+        -> reverse() : a.reverse(); // reverse the Array
+        -> pop() :  a.pop(); // delete last index value
+        -> push() : a.push("value"); // add last index value
+        -> shift() : a.shift(); // delete first index value
+        -> unshift() : a.unshift("value"); //add first index value
+        -> concat() : var b = a.concat("val1","val2"); //concatination in exiting Array
+        -> join() : a.join(" "); // join the Array in one single value.
+        -> slice() : slice(stat,end); //they gives between starting and ending value in new array. 
+                                    // if you give the -minus value they starting in last
+        -> splice() : splice(index,howmany,"new value"); // splice can add and delete the value also.
+        -> isArray() : Array.isArray(a); //check the store value is datatype array or not.
+        -> indexOf() : a.indexOf("Aman",start searching index) // if searching iteam is not an array they will return -1
+        -> lastIndexOf() : a.lastIndexOf("Aman",start searching index) 
+        -> includes() : a.includes(search iteam) //They give true or false value
+        -> some() : a.some(functionName); //you have to make a function and it's give true or false
+        -> every() : a.every(functionName); //make the function and it's give true or false
+            ->  diffrent between : some & every
+             -> some can check just one value to math the given condition in function.
+             -> every can check the math every value of the given condition in function.
+        -> find() : a.find(functionName); //it's give first value of the pass on condition.
+        -> findIndex() : a.findIndex(functionName); //it's give a index of the first pass condition value.
+        -> filter(): a.filter(functionName); //it's create an array filled with all array elements that pass a test.
+        -> toString() : a.toString(); // it's convert array to String. 
+        -> valueOf() : a.valueOf(); // it's print the array.
+        -> fill() : a.fill(); // it's fills all the elements in an array with a static value.
+        -> forEach() : a.forEach(function(value,index){//code}); //used like loop.
+
+Object : 
     
-    Call UDF On Click Event : 
+    -> We can write function and array in object.
 
-     <button onclick="name_()">Submit</button>
+        Ex. var a = {
+            FN : "Ram",
+            LN : true,
+            age : 18,
+            Array : [10,20,30,40,50],
+            FunctionName : function(){
+                return xyz;
+            }
+            };
+            document.write(a['age']);
 
-     function name_(){
-        var x = document.getElementById("name").value;
-        var y = "Hello " + x;
-        alert(y);   
-     }
+    -> var a = new object();
 
+    -> Array Of object :
+
+        Ex. var student = [
+            {name : 'Ram'},
+            {name : 20}
+            ];
+            document.write(student[a].name);
+
+    -> For in loop : use for print a object.
+
+        -> for(var var_name in object_name){
+             document.write( key + obj[key]);
+           }        
+
+-> Map() : 
+
+    -> we can do any kind of action in exiting array.
+   
+    -> map function create a new array after action in exiting array.
+
+    -> array.map(function(){//code});
+
+-> String Methods : 
+
+    -> str.length; // it's a property.
+    -> str.toLowerCase();
+    -> str.toUpperCase();
+    -> str.includes(); //it's use for searching return true or false, cashsensetive function.
+    -> str.startsWith(); //it's use for starting string searching, cashsensetive function.
+    -> str.endsWith(); //it's use for ending searching, cashsensetive function.
+    -> str.search(); //it's use for searching but search function return a position of the search.
+    -> str.match(/is/g);  //it's use for searching but make a new array for match value.
+    -> str.indexOf();/
+    -> str.lastIndexOf();
+    -> str.replace("old word","new world");
+    -> str.trim(); //remove extra Space.
+    -> str.charAt(indexnumber); //give the value of the indexnumber.
+    -> str.charCodeAt(a); //give a sky code.
+    -> String.fromCharCode(2) //return character.
+    -> str.concat();
+    -> str.split(" "); //split the array when they get space, also split in character.
+    -> str.repeat(2); // repeat the string as you wish time. 
+    -> str.slice(starting index, ending index); //give between string.
+    -> str.substr(star,end);
+    -> str.substring(star,end);
+    -> str.toString();
+    -> str.valueOf();
+
+-> Math Methods : 
+
+    -> Math.ceil(x); // they gives uper value 
+    -> Math.floor(x); // they gives down value
+    -> Math.round(x); // if value more than 0.5 it's return 1 remain 0.
+    -> Math.trunc(x); //it's remove value after dote.
+    -> Math.max(values); //it's give maximum value.
+    -> Math.min(values); //it's give minimun value.
+    -> Math.sqrt(x); //it's give squar root of value.
+    -> Math.cbrt(x); //it's give cube root of value.
+    -> Math.pow(base,power); 
+    -> Math.random(); //it's return value between 0 to 1.
+    -> Math.abs(x); //it's return absulate(not given minus value) value. 
+    -> Math.PI; // return 3.141592653589793.
+
+-> Date Methods : 
+
+    -> syntax : var now = new Date('Here Also Pass Date!'); //here now make a date object.
     
+    -> Get:
+        -> now.toDateString(); //it's print full date.
+        -> now.getDate(); //it's return todays date.
+        -> now.getFullYear(); //it's return year.
+        -> now.getMonth(); //it's return month, month star with 0(january).
+        -> now.getDay(); //it's get day, star with 0(sunday).
+        -> now.getHours(); 
+        -> now.getMinutes();
+        -> now.getSeconds();
+        -> now.getMilliseconds();
+  
+    -> Set :
+        -> now.setDate('Enter Date'); //it's return at that date,time,year etc..
+        -> now.setFullYear('Enter year'); //it's return at that year data.
+        -> now.setMonth('Enter Month'); //it's return at that month data.
+        -> now.setHours('Enter Hourse');
+        -> now.setMinutes('Enter Minit');
+        -> now.setSeconds('Enter secound');
+        -> now.setMilliseconds('Enter Milliseconds');  
+
+-> HTML DOM(Document Object Module) Tree :
+
+    -> HTML 
+
+        -> head
+            -> elements(title) 
+
+        -> body
+            -> elements(nav)
+            -> elements(A)
+            -> elements(h1)
+
+-> DOM Targeting Methods :
+
+    -> ID : document.getElementById(id);
+
+        -> Get : 
+           
+            -> document.getElementById(id).innerText;
+
+            -> document.getElementById(id).innerHTML;
+
+            -> document.getElementById(id).getAttribute("class"); //return id Attribute like class or id or style or function etc.. name.
+
+            -> document.getElementById(id).getAttribute("class");
+
+            -> document.getElementById(id).attributes[2].value;
+
+        -> Set : 
+
+            -> document.getElementById(id).innerText = "value" ; // only set a innerText.
+
+            -> document.getElementById(id).innerHTML="<h1>wow</h1>";
+            
+            -> document.getElementById(id).setAttribute("class",value);
+
+            -> document.getElementById(id).attributes[2].value = "value";
+
+            -> document.getElementById(id).removeAttribute("Name of attributes");
+
+    -> CLASS : document.getElementsByClassName(name)[];
+    
+    -> TAG NAME : document.getElementsByTagName(name)[]; 
+
+    -> var elements = document.all[2];
+
+    -> document.body;, document.link, document.URL, etc..;
+
+    -> document.querySelector(CSS Selector); //they Select only first Selector.
+
+    -> document.querySelectorAll(CSS Selector); // they Select all the Selector.
+
+    or..
+
+    -> document.querySelectorAll(CSS Selector)[].innerHTML; 
+
+    -> CSS Styling Methods : 
+
+        -> Get : 
+
+            -> document.querySelector(CSS Selector).style.border;
+
+            -> document.querySelector(CSS Select).className;
+
+            -> document.querySelector(CSS Selector).classList;
+
+        -> Set : 
+
+            -> document.querySelector(CSS Selector).style.border = 10; 
+
+            -> document.querySelector(CSS Selector).className = "abc"; 
+
+            -> document.querySelector(CSS Selector).classList.add("name of class","name of class");
+
+            -> document.querySelector(CSS Select).classList.remove("Name of class","name of class");
+
+            -> document
