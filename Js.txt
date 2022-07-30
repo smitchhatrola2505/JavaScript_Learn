@@ -1,28 +1,34 @@
                              ** JavaScript ** (cashsensetive)
 
 Introduction : 
+
+-> Note :     
+
+    -> window.print();
+
+    -> Object ProtoType : 
     
-What is JavaScript?
+-> What is JavaScript?
     
     -> JavaScript is an interpreted, client-side, event-based, object-oriented scripting language.
     -> Invented in 1995 at Netscape Corporation(livescript)
     -> JavaScript programs are run by an interpreter built into the user's web browser.
     -> It is a case-sestitive language
 
-What can JavaScript do ?
+-> What can JavaScript do ?
 
     -> JavaScript can dynamically modify at html page
     -> JavaScript can validate user input JavaScript can validate user input
     -> JavaScript can be used to create cookies
     -> JavaScript is a full-featured programming language
 
-What makes JavaScript unique ? 
+-> What makes JavaScript unique ? 
 
     -> Support by all major browser and enabled by default
     -> Complex things are done simply
     -> Full integration with html/css 
 
-JavaScript Frameworks and libraries
+-> JavaScript Frameworks and libraries
    
     -> Angular
     -> React 
@@ -35,13 +41,13 @@ JavaScript Frameworks and libraries
     -> Aurelia
     -> Backbone.js
 
-Js In Html Page : 
+-> Js In Html Page : 
 
     -> Internal : <script type="text/JavaScript"> //js code goes hear </script>
 
     -> External :  <script src="index.js"> </script>
 
-console : 
+-> console : 
 
     -> Show the JavaScript error.
 
@@ -55,13 +61,13 @@ console :
     console.time("To show the run time");
     console.timeEnd("To show the end of time");
 
-Comments : 
+-> Comments : 
 
     -> Single Line :  // 
 
     -> Multiple Line : /* */
 
-Important Function : 
+-> Important Function : 
 
     -> alert()
     -> confirm()
@@ -79,7 +85,7 @@ Important Function :
 
         prompt(msg,default) : Creates an dialog for user input 
 
-Variable : 
+-> Variable : 
 
     -> Variable are a cash sensetive.
 
@@ -105,7 +111,7 @@ Variable :
 
         -> Global Variable's life time is throughout the program
 
-data type : 
+-> data type : 
 
     typeof x;
 
@@ -123,7 +129,7 @@ data type :
 
     Object : var x = {first : "smit",secound : "Patel"}; 
 
-Type Conversion : 
+-> Type Conversion : 
 
     -> Number();
     -> parseFloat();
@@ -137,7 +143,7 @@ Type Conversion :
     -> getDate();
     -> getMonth();
 
-Operator & Types Of Operator : 
+-> Operator & Types Of Operator : 
 
     -> Arithmetic : +, -, *, /, %(remainder), ++, --,**
     
@@ -152,7 +158,7 @@ Operator & Types Of Operator :
         -> Strict comparison (e.g., ===)
         -> Abstract comparison (e.g. ==)
 
-Condition Statement : 
+-> Condition Statement : 
 
     ->  if(Condition) {
          
@@ -183,7 +189,7 @@ Condition Statement :
         
         }
 
-Put & Get data from Html : 
+-> Put & Get data from Html : 
 
     -> document.getElementById() : var x = document.getElementById("main").innerHTML;
 
@@ -191,7 +197,7 @@ Put & Get data from Html :
                                             alert(x);
        innerHTML()
 
-String Concatenation (+) : 
+-> String Concatenation (+) : 
 
     -> var z = "hello" + "Everyone" ;
        alert(z);
@@ -200,7 +206,7 @@ String Concatenation (+) :
        var b = "Everyone";
        var c = a + b ;
 
-Functions : 
+-> Functions : 
 
     -> Function are group of code or program which is used more often. 
 
@@ -237,12 +243,12 @@ Functions :
                 }
                 var res = functionName();
         
-    Arrow Function : 
+    Arrow Function : let functionName = (a,b) => a*b;
 
     Call Back Function : A callback the function is a function that is passed to another function as an argument and is executed after some operation has been completed. 
                              Below is an example of a simple callback function that logs to the console after some operations have been completed.
 
-Events : 
+-> Events : 
 
     -> Click :
         -> onclick = "functionName()"
@@ -273,7 +279,7 @@ Events :
     -> Key Up :
         -> onkeyup
 
-    -> Load :
+    -> Load : load a page 
         -> onload
 
     -> Unload :
@@ -285,7 +291,7 @@ Events :
     -> Scroll :         
         -> onscroll 
 
-Loops : 
+-> Loops : 
 
     -> while : 
         -> while(condition){
@@ -305,7 +311,7 @@ Loops :
     -> for/in : Work in Object 
     -> forEach : Work in Array
 
-Nestes Loop : 
+-> Nestes Loop : 
 
     -> for(condition){ //represent Row
         for(condition){ //represent Column
@@ -313,12 +319,12 @@ Nestes Loop :
             }
         }
 
-Break & Continue : 
+-> Break & Continue : 
 
     -> Continue : work on Continue the loop. 
     -> Break : work on break the loop. 
 
-JS Methods : 
+-> JS Methods : 
 
     -> .replaceAll(' ','') //Remove The White Space in String.
     -> .match(/[aeiou]/gi) //match string
@@ -326,7 +332,7 @@ JS Methods :
     -> .reverse(); //reverse the string or an array.
     -> .join(); or join(" and ");
 
-Arrays : 
+-> Arrays : 
 
     -> We can store Multiple value in Single Variable.
 
@@ -371,7 +377,7 @@ Arrays :
         -> fill() : a.fill(); // it's fills all the elements in an array with a static value.
         -> forEach() : a.forEach(function(value,index){//code}); //used like loop.
 
-Object : 
+-> Object : 
     
     -> We can write function and array in object.
 
@@ -384,6 +390,7 @@ Object :
                 return xyz;
             }
             };
+            
             document.write(a['age']);
 
     -> var a = new object();
@@ -487,6 +494,10 @@ Object :
             -> elements(A)
             -> elements(h1)
 
+-> HTML DOM Element :  
+
+    -> childNodes 
+
 -> DOM Targeting Methods :
 
     -> ID : document.getElementById(id);
@@ -551,4 +562,44 @@ Object :
 
             -> document.querySelector(CSS Select).classList.remove("Name of class","name of class");
 
-            -> document
+-> addEventListener Methods : 
+
+    -> 1(Ex) 
+
+        -> document.getElementById("Name of Id").onclick = abc; //here used anykind of Events.
+
+        -> function name(){
+              document.getElementById("name").style.background = "Green";
+            }
+
+    -> 2(Ex) : addEventListener
+
+        -> document.getElementById("Name Of Id").addEventListener("click",Name of function); //here used anykind of Events.
+
+        -> function abc(){
+              document.getElementById("Name of Id").style.background = "green";
+            }
+
+        -> OR : addEventListener
+
+        -> document.getElementById("Name Of Id").addEventListener("click",function(){
+                document.getElementById("name of id").style.border = "10px solid red";
+           })
+
+    -> useCapture : 
+
+        -> addEventListener(event,function,useCapture); //useCapture : true & false
+
+        -> document.querySelector("#inner").addEventListener('click',function(){
+            alert('outer div');
+            },true);
+
+        -> document.querySelector("#outer").addEventListener('click',function(){
+            alert("inner div");
+            },true); //default value of false
+        
+        -> element.removeEventListener("ondblclick",functionName);            
+ 
+-> classList Methods: 
+
+    -> add() : 
