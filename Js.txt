@@ -8,6 +8,12 @@ Introduction :
 
     -> Object ProtoType : 
     
+    -> \xB0C : for celusius symbol
+
+    -> \xB0F : for Fahrenheit symbol
+
+    -> Get The Website URL : document.URL
+
 -> What is JavaScript?
     
     -> JavaScript is an interpreted, client-side, event-based, object-oriented scripting language.
@@ -207,6 +213,8 @@ Introduction :
        var c = a + b ;
 
 -> Functions : 
+
+    -> a set of statements that performs a task or calculates a value.
 
     -> Function are group of code or program which is used more often. 
 
@@ -419,6 +427,7 @@ Introduction :
 
 -> String Methods : 
 
+    -> str.pop(); //it's remove last index of array and we can also get last index.
     -> str.length; // it's a property.
     -> str.toLowerCase();
     -> str.toUpperCase();
@@ -439,7 +448,7 @@ Introduction :
     -> str.repeat(2); // repeat the string as you wish time. 
     -> str.slice(starting index, ending index); //give between string.
     -> str.substr(star,end);
-    -> str.substring(star,end);
+    -> str.substring(star,end); //If start is greater than end, arguments are swapped: (4, 1) = (1, 4).
     -> str.toString();
     -> str.valueOf();
 
@@ -460,7 +469,7 @@ Introduction :
 
 -> Date Methods : 
 
-    -> syntax : var now = new Date('Here Also Pass Date!'); //here now make a date object.
+    -> syntax : var now = new Date(year, month, day, hours, minutes, seconds, milliseconds); //here now make a date object.
     
     -> Get:
         -> now.toDateString(); //it's print full date.
@@ -468,6 +477,7 @@ Introduction :
         -> now.getFullYear(); //it's return year.
         -> now.getMonth(); //it's return month, month star with 0(january).
         -> now.getDay(); //it's get day, star with 0(sunday).
+        -> now.getTime(); //it's give a milliseconds time.
         -> now.getHours(); 
         -> now.getMinutes();
         -> now.getSeconds();
@@ -602,4 +612,61 @@ Introduction :
  
 -> classList Methods: 
 
-    -> add() : 
+
+    -> add(class1, class2,...) & remove(class1, class2,...) & length: 
+                
+        -> Ex.  document.getElementById("header").addEventListener("click",abc);
+
+                function abc(){
+                    add : document.getElementById("header").classList.add("xyz");
+                    remove : document.getElementById("header").classList.remove("xyz");
+                    length : document.getElementById("header").classList.length;
+                }
+
+    -> toggle(class):
+
+        -> one click add class and one click remove class
+
+        -> Ex. document.getElementById("header").classList.toggle("xyz"); // one click add class after one click   remove the class
+
+    -> item(index) : 
+
+        -> it's show the class name of this index.
+
+        -> var a = document.getElementById("header").classList.iteam(0);
+
+    -> contains(class) : 
+
+        -> if class exits than return true otherwise return false.
+
+        -> document.getElementById("id").classList.contains("class").
+
+-> DOM Traversal Methods : 
+
+    -> sibling : brother, sister in one level.
+
+    -> var a = document.getElementById("id").parentElement;
+
+    -> var a = document.getElementById("id").parentElement.style.background = "red";
+
+    -> we can used parentNode instand of parentElement.
+
+    -> parentNode can return something, but parentElement can return null.
+
+-> Object Oriented Programming : 
+
+    -> Don't Repeat Yourself
+    
+    -> 1. Object : in this world every thing is a object(living thing and non living things)
+
+        -> Every Object has 2 things : 
+
+            -> Features or properties
+
+            -> Actions performed by or performed on it
+
+    -> 2. Class : grouping of object
+    
+    -> 3. Inheritance : 
+
+    -> 4. constructor :  
